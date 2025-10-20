@@ -1,0 +1,62 @@
+export const scheduleData = [
+  {
+    time: "9:00 AM",
+    event: "Opening Ceremony",
+    venue: "Main Auditorium",
+    day: "Day 1",
+  },
+  {
+    time: "10:00 AM",
+    event: "Hackathon Begins",
+    venue: "Lab 301",
+    day: "Day 1",
+  },
+  { time: "11:00 AM", event: "Code Sprint", venue: "Lab 205", day: "Day 1" },
+  { time: "12:30 PM", event: "Lunch Break", venue: "Food Court", day: "Day 1" },
+  {
+    time: "2:00 PM",
+    event: "Workshop: AI/ML",
+    venue: "Seminar Hall",
+    day: "Day 1",
+  },
+  {
+    time: "3:00 PM",
+    event: "Gaming Tournament",
+    venue: "Gaming Zone",
+    day: "Day 1",
+  },
+  { time: "5:00 PM", event: "Tech Talk", venue: "Auditorium", day: "Day 1" },
+  {
+    time: "7:00 PM",
+    event: "Cultural Night",
+    venue: "Open Stage",
+    day: "Day 1",
+  },
+  {
+    time: "9:00 AM",
+    event: "Hackathon Continues",
+    venue: "Lab 301",
+    day: "Day 2",
+  },
+  { time: "10:00 AM", event: "Tech Quiz", venue: "Auditorium", day: "Day 2" },
+  { time: "12:00 PM", event: "Lunch Break", venue: "Food Court", day: "Day 2" },
+  { time: "2:00 PM", event: "Robo War", venue: "Arena Ground", day: "Day 2" },
+  {
+    time: "4:00 PM",
+    event: "Circuit Design",
+    venue: "Electronics Lab",
+    day: "Day 2",
+  },
+  {
+    time: "6:00 PM",
+    event: "Prize Distribution",
+    venue: "Main Auditorium",
+    day: "Day 2",
+  },
+  {
+    time: "7:30 PM",
+    event: "Closing Ceremony",
+    venue: "Main Auditorium",
+    day: "Day 2",
+  },
+];

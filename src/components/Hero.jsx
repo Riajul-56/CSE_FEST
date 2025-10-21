@@ -58,45 +58,47 @@ const Hero = ({ darkMode }) => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 text-center z-10 mt-16">
+      <div className="container mx-auto px-4 sm:px-6 text-center z-10 mt-16">
         <div className="mb-8 animate-fade-in">
           <div className="inline-block bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-6 border border-white/20">
             <span className="text-blue-200 font-semibold">
               🎉 Biggest Tech Fest of the Year
             </span>
           </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-glow">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-glow">
             CSE FEST 2025
           </h1>
-          <p className="text-2xl md:text-3xl text-blue-200 mb-8 font-light">
+          <p className="text-xl sm:text-2xl md:text-3xl text-blue-200 mb-8 font-light">
             Innovate • Compete • Celebrate
           </p>
 
           {/* Event Details */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8">
             {eventDetails.map((detail, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/20"
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-lg px-3 sm:px-4 py-2 border border-white/20"
               >
                 <div className="text-blue-300">{detail.icon}</div>
-                <span className="text-blue-100">{detail.text}</span>
+                <span className="text-blue-100 text-sm sm:text-base">
+                  {detail.text}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Countdown Timer */}
-        <div className="flex justify-center gap-4 mb-12">
+        {/* Countdown Timer (Fixed for Mobile) */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 w-full">
           {Object.entries(countdown).map(([key, value]) => (
             <div
               key={key}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-4 min-w-[100px] border border-white/20 hover:scale-105 transition-transform duration-300"
+              className="bg-white/10 backdrop-blur-md rounded-xl p-3 sm:p-4 flex-1 min-w-[70px] sm:min-w-[90px] max-w-[90px] sm:max-w-[110px] border border-white/20 hover:scale-105 transition-transform duration-300"
             >
-              <div className="text-3xl font-bold text-white">
+              <div className="text-2xl sm:text-3xl font-bold text-white">
                 {value.toString().padStart(2, "0")}
               </div>
-              <div className="text-sm text-blue-200 capitalize font-medium">
+              <div className="text-xs sm:text-sm text-blue-200 capitalize font-medium">
                 {key}
               </div>
             </div>
@@ -104,14 +106,14 @@ const Hero = ({ darkMode }) => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center mb-16">
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-16">
           <button
             onClick={scrollToEvents}
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 animate-pulse"
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 animate-pulse text-sm sm:text-base"
           >
             🚀 Explore Events
           </button>
-          <button className="bg-white/10 backdrop-blur-md hover:bg-white/20 px-8 py-4 rounded-full font-semibold transition-all duration-300 border border-white/30 hover:scale-105 hover:shadow-lg">
+          <button className="bg-white/10 backdrop-blur-md hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 border border-white/30 hover:scale-105 hover:shadow-lg text-sm sm:text-base">
             📝 Register Now
           </button>
         </div>

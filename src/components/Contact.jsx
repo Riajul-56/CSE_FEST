@@ -51,7 +51,7 @@ const Contact = ({ darkMode }) => {
     {
       icon: <MapPin size={24} />,
       title: "Location",
-      info: "CSE Department, University Campus",
+      info: "CSE Department, Metropolitan University Campus",
       link: "#",
       color: "from-blue-500 to-cyan-500",
     },

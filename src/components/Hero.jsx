@@ -26,7 +26,7 @@ const Hero = ({ darkMode }) => {
   }, []);
 
   const scrollToEvents = () => {
-    document.querySelector("#events").scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#events")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const eventDetails = [
@@ -38,7 +38,7 @@ const Hero = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen pb-24 md:pb-32 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white flex items-center justify-center relative overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
@@ -88,7 +88,7 @@ const Hero = ({ darkMode }) => {
           </div>
         </div>
 
-        {/* Countdown Timer (Fixed for Mobile) */}
+        {/* Countdown Timer (Responsive) */}
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 w-full">
           {Object.entries(countdown).map(([key, value]) => (
             <div
@@ -118,17 +118,19 @@ const Hero = ({ darkMode }) => {
           </button>
         </div>
 
-        {/* Scroll Indicator */}
-        <button
-          onClick={() =>
-            document
-              .querySelector("#about")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce bg-white/10 backdrop-blur-md rounded-full p-2 border border-white/20 hover:scale-110 transition-transform duration-300"
-        >
-          <ChevronDown size={32} className="text-blue-200" />
-        </button>
+        {/* Scroll Indicator (Fixed) */}
+        <div className="relative flex justify-center mt-4 sm:mt-6">
+          <button
+            onClick={() =>
+              document
+                .querySelector("#about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="animate-bounce bg-white/10 backdrop-blur-md rounded-full p-2 border border-white/20 hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-blue-500/25"
+          >
+            <ChevronDown size={32} className="text-blue-200" />
+          </button>
+        </div>
       </div>
     </section>
   );

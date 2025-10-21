@@ -48,7 +48,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               }`}
             >
               CSE
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent ml-1.5">
                 FEST
               </span>
             </h1>
